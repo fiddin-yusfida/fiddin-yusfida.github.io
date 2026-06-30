@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="content.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260630-2">
+  <script src="content.js?v=20260630-2" defer></script>
+  <script src="app.js?v=20260630-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Lewati ke konten</a>
@@ -25,8 +25,7 @@
     <nav id="site-nav" class="site-nav" aria-label="Navigasi utama">
       <a href="#about">Tentang</a>
       <a href="#research">Riset</a>
-      <a href="#teaching">Pengajaran</a>
-      <a href="#publications">Publikasi</a>
+      <a href="#profiles">Profil Akademik</a>
       <a class="nav-cta" href="#contact">Kontak</a>
     </nav>
   </header>
@@ -38,7 +37,7 @@
         <h1 id="hero-name"></h1>
         <p class="hero-summary" id="hero-summary"></p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#research">Lihat Karya</a>
+          <a class="button button-primary" href="#research">Lihat Fokus Riset</a>
           <a class="button button-secondary" id="github-link" href="https://github.com/fiddin-yusfida">GitHub</a>
         </div>
       </div>
@@ -64,26 +63,19 @@
 
     <section id="research" class="section-shell content-section">
       <div class="section-heading">
-        <p class="eyebrow">Dampak & Kolaborasi</p>
-        <h2>Riset dan Proyek</h2>
+        <p class="eyebrow">Research Interests</p>
+        <h2>Fokus Penelitian</h2>
       </div>
-      <div class="card-grid" id="project-list"></div>
+      <div class="card-grid" id="research-list"></div>
     </section>
 
-    <section id="teaching" class="section-shell content-section accent-section">
+    <section id="profiles" class="section-shell content-section accent-section">
       <div class="section-heading">
-        <p class="eyebrow">Berbagi Pengetahuan</p>
-        <h2>Pengajaran</h2>
+        <p class="eyebrow">Research Identity</p>
+        <h2>Profil Akademik</h2>
       </div>
-      <div class="card-grid" id="teaching-list"></div>
-    </section>
-
-    <section id="publications" class="section-shell content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Kontribusi Ilmiah</p>
-        <h2>Publikasi Terpilih</h2>
-      </div>
-      <div class="publication-list" id="publication-list"></div>
+      <p class="profiles-intro">Rekam publikasi dan identitas peneliti dapat diakses melalui platform akademik berikut.</p>
+      <div class="profile-link-grid" id="academic-links"></div>
     </section>
 
     <section id="contact" class="contact-section section-shell">

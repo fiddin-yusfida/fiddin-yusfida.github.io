@@ -16,11 +16,16 @@ const facts = [
 byId("profile-facts").innerHTML = facts.map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join("");
 byId("expertise-list").innerHTML = content.profile.expertise.map((item) => `<span>${item}</span>`).join("");
 
-const card = (item) => `<article class="content-card"><p class="card-meta">${item.meta}</p><h3>${item.title}</h3><p>${item.description}</p><a href="${item.url}">Lihat selengkapnya <span aria-hidden="true">→</span></a></article>`;
-byId("project-list").innerHTML = content.projects.map(card).join("");
-byId("teaching-list").innerHTML = content.teaching.map(card).join("");
-byId("publication-list").innerHTML = content.publications.map((item) => `<article class="publication"><span>${item.year}</span><div><h3><a href="${item.url}">${item.title}</a></h3><p>${item.venue}</p></div></article>`).join("");
-byId("contact-links").innerHTML = content.links.map((item, index) => `<a class="button ${index === 0 ? "button-primary" : "button-secondary"}" href="${item.url}">${item.label}</a>`).join("");
+const card = (item) => `<article class="content-card"><p class="card-meta">${item.meta}</p><h3>${item.title}</h3><p>${item.description}</p></article>`;
+byId("research-list").innerHTML = content.researchAreas.map(card).join("");
+
+const academicLabels = new Set(["Google Scholar", "SINTA", "ORCID", "Scopus", "LinkedIn", "Institution"]);
+const academicLinks = content.links.filter((item) => academicLabels.has(item.label));
+byId("academic-links").innerHTML = academicLinks.map((item) => `<a class="profile-link" href="${item.url}" target="_blank" rel="noreferrer"><span>${item.label}</span><span aria-hidden="true">↗</span></a>`).join("");
+
+const primaryLabels = new Set(["GitHub", "Email"]);
+const primaryLinks = content.links.filter((item) => primaryLabels.has(item.label));
+byId("contact-links").innerHTML = primaryLinks.map((item, index) => `<a class="button ${index === 0 ? "button-primary" : "button-secondary"}" href="${item.url}">${item.label}</a>`).join("");
 
 const toggle = document.querySelector(".nav-toggle");
 const nav = byId("site-nav");

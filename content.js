@@ -19,28 +19,26 @@ window.profileContent = {
     { label: "LinkedIn", url: "https://id.linkedin.com/in/fiddinyusfida" },
     { label: "Institution", url: "https://startika.vokasi.uns.ac.id" }
   ],
-  projects: [
+  researchAreas: [
     {
-      title: "Proyek riset akan ditambahkan",
-      description: "Tambahkan proyek unggulan beserta kontribusi, manfaat, dan tautan repository atau publikasinya.",
-      url: "https://github.com/fiddin-yusfida",
-      meta: "Riset · Kolaborasi"
-    }
-  ],
-  teaching: [
+      title: "Computer Vision",
+      description: "Pengembangan metode untuk memahami, menganalisis, dan mengekstraksi informasi bermakna dari data visual.",
+      meta: "Research Area"
+    },
     {
-      title: "Materi pengajaran akan ditambahkan",
-      description: "Bagikan mata kuliah, bahan ajar terbuka, atau repository praktikum yang dapat digunakan mahasiswa.",
-      url: "https://github.com/fiddin-yusfida",
-      meta: "Pengajaran · Open Education"
-    }
-  ],
-  publications: [
+      title: "Deep Learning",
+      description: "Eksplorasi arsitektur dan strategi pembelajaran mendalam untuk klasifikasi serta pengenalan pola.",
+      meta: "Research Area"
+    },
     {
-      title: "Publikasi terpilih akan ditambahkan",
-      venue: "Lengkapi judul, tahun, jurnal atau konferensi, dan DOI.",
-      year: "—",
-      url: "https://github.com/fiddin-yusfida"
+      title: "Medical Image Classification",
+      description: "Penerapan metode komputasi untuk membantu klasifikasi citra medis secara akurat dan dapat dievaluasi.",
+      meta: "Research Area"
+    },
+    {
+      title: "Applied Machine Learning",
+      description: "Penerapan machine learning pada permasalahan nyata dengan fokus pada manfaat, evaluasi, dan dampak.",
+      meta: "Research Area"
     }
   ]
 };
