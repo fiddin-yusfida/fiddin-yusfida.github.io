@@ -71,7 +71,10 @@ h3 { font-size: 1.35rem; }
 .history-content { padding: 0 0 2rem 1rem; border-bottom: 1px solid var(--line); }
 .history-content h3 { margin: 0 0 .75rem; }
 .history-content > p { max-width: 800px; margin: 0 0 1.4rem; color: var(--muted); }
+.history-content details { border-top: 1px solid var(--line); }
+.history-content summary { padding: 1rem 0; color: var(--navy); font-weight: 700; cursor: pointer; }
 .history-content ul { display: grid; gap: .9rem; margin: 0; padding: 0; list-style: none; }
+.history-content details[open] ul { padding: .25rem 0 .5rem; }
 .history-content li { display: grid; gap: .15rem; }
 .history-content a { color: var(--navy); font-weight: 700; text-decoration: none; }
 .history-content a:hover { text-decoration: underline; }

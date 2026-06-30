@@ -25,12 +25,15 @@ byId("research-history").innerHTML = content.researchHistory.map((entry) => `
     <div class="history-content">
       <h3>${entry.theme}</h3>
       <p>${entry.description}</p>
-      <ul>${entry.publications.map((publication) => `<li><a href="${publication.url}" target="_blank" rel="noreferrer">${publication.title}</a><span>${publication.venue}</span></li>`).join("")}</ul>
+      <details ${entry.year === "2025" ? "open" : ""}>
+        <summary>${entry.publications.length} selected publication${entry.publications.length === 1 ? "" : "s"}</summary>
+        <ul>${entry.publications.map((publication) => `<li><a href="${publication.url}" target="_blank" rel="noreferrer">${publication.title}</a><span>${publication.venue}</span></li>`).join("")}</ul>
+      </details>
     </div>
   </article>
 `).join("");
 
-const academicLabels = new Set(["Google Scholar", "SINTA", "ORCID", "Scopus", "LinkedIn", "Department Website"]);
+const academicLabels = new Set(["Google Scholar", "SINTA", "ORCID", "Scopus", "IEEE Xplore", "LinkedIn", "Department Website"]);
 const academicLinks = content.links.filter((item) => academicLabels.has(item.label));
 byId("academic-links").innerHTML = academicLinks.map((item) => `<a class="profile-link" href="${item.url}" target="_blank" rel="noreferrer"><span>${item.label}</span><span aria-hidden="true">↗</span></a>`).join("");
 
