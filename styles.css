@@ -62,6 +62,20 @@ h3 { font-size: 1.35rem; }
 .profile-link-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .profile-link { display: flex; align-items: center; justify-content: space-between; min-height: 74px; padding: 1rem 1.2rem; color: var(--navy); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-weight: 700; text-decoration: none; transition: transform .2s, border-color .2s, box-shadow .2s; }
 .profile-link:hover { transform: translateY(-2px); border-color: var(--navy); box-shadow: 0 12px 30px rgb(13 59 102 / 10%); }
+.history-intro { max-width: 760px; margin: -2rem 0 3rem; color: var(--muted); font-size: 1.05rem; }
+.research-timeline { position: relative; }
+.research-timeline::before { content: ""; position: absolute; top: .4rem; bottom: 0; left: 58px; width: 1px; background: var(--line); }
+.history-entry { position: relative; display: grid; grid-template-columns: 92px 1fr; gap: 1.5rem; padding-bottom: 3rem; }
+.history-entry::before { content: ""; position: absolute; top: .45rem; left: 52px; width: 13px; height: 13px; background: var(--gold); border: 4px solid var(--background); border-radius: 50%; }
+.history-year { color: var(--navy); font-weight: 700; }
+.history-content { padding: 0 0 2rem 1rem; border-bottom: 1px solid var(--line); }
+.history-content h3 { margin: 0 0 .75rem; }
+.history-content > p { max-width: 800px; margin: 0 0 1.4rem; color: var(--muted); }
+.history-content ul { display: grid; gap: .9rem; margin: 0; padding: 0; list-style: none; }
+.history-content li { display: grid; gap: .15rem; }
+.history-content a { color: var(--navy); font-weight: 700; text-decoration: none; }
+.history-content a:hover { text-decoration: underline; }
+.history-content li span { color: var(--muted); font-size: .85rem; }
 .publication { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 1.5rem 0; border-top: 1px solid var(--line); }
 .publication > span { color: var(--navy); font-weight: 700; }
 .publication h3, .publication p { margin: 0; }
@@ -83,6 +97,10 @@ h3 { font-size: 1.35rem; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-block: 4rem; }
   h1 { font-size: clamp(3rem, 17vw, 5rem); }
   .about-grid, .card-grid, .profile-link-grid { grid-template-columns: 1fr; }
+  .research-timeline::before { left: 42px; }
+  .history-entry { grid-template-columns: 68px 1fr; gap: .75rem; }
+  .history-entry::before { left: 36px; }
+  .history-content { padding-left: .5rem; }
   .content-section { padding-block: 5rem; }
   .accent-section { width: 100%; }
   .site-footer { flex-direction: column; }
