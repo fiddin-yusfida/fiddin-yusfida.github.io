@@ -4,105 +4,79 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic profile of Fiddin Yusfida A'la, Lecturer in Informatics Engineering at Universitas Sebelas Maret.">
-  <meta name="theme-color" content="#1d3b2a">
+  <meta name="theme-color" content="#102a56">
   <title>Fiddin Yusfida A'la | Academic Profile</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260701-2">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260701-3">
   <script src="content.js?v=20260630-5" defer></script>
-  <script src="app.js?v=20260701-2" defer></script>
+  <script src="app.js?v=20260701-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="page-shell">
-    <aside class="identity-pane">
-      <div class="identity-card">
-        <a class="brand" href="#overview" aria-label="Fiddin Yusfida A'la homepage">
-          <span class="brand-text">Academic Profile</span>
-        </a>
 
-        <p class="eyebrow">Informatics Engineering</p>
-        <h1 id="hero-name"></h1>
-        <p class="identity-role" id="hero-role"></p>
-        <p class="identity-summary" id="hero-summary"></p>
-        <dl class="identity-facts" id="profile-facts"></dl>
-
-        <nav class="section-nav" aria-label="Primary navigation">
-          <a href="#overview">Overview</a>
-          <a href="#about">About</a>
-          <a href="#research">Research Focus</a>
-          <a href="#history">Research History</a>
-          <a href="#profiles">Academic Profiles</a>
-        </nav>
-
-        <div class="sidebar-links" id="sidebar-links"></div>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <div class="identity">
+        <p class="identity-kicker">Academic Profile</p>
+        <h1 id="profile-name"></h1>
+        <p id="profile-role"></p>
+        <p id="profile-institution"></p>
       </div>
-    </aside>
+      <div class="header-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
 
-    <main id="main" class="content-pane">
-      <section id="overview" class="intro-panel">
-        <p class="eyebrow">Overview</p>
-        <h2>Research and teaching in computer vision, deep learning, medical image classification, and applied machine learning.</h2>
-        <p class="section-copy" id="about-text"></p>
-        <div class="overview-meta" id="profile-stats"></div>
-      </section>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="#top">Top</a>
+      <a href="#profile">Profile</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#links">Links</a>
+    </div>
+  </nav>
 
-      <section id="about" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow">Academic Profile</p>
-          <h2>About</h2>
-        </div>
-        <div class="section-card about-card">
-          <div>
-            <p class="lead">A lecturer and researcher with an academic focus on computer vision, deep learning, medical image analysis, and applied machine learning.</p>
-            <p class="section-copy" id="collaboration-text"></p>
-          </div>
-          <div>
-            <h3>Areas of Expertise</h3>
-            <div class="tag-list" id="expertise-list"></div>
-          </div>
-        </div>
-      </section>
+  <main id="main" class="page-content">
+    <section id="profile" class="page-section">
+      <h2>Profile</h2>
+      <p class="lead" id="profile-summary"></p>
+      <p id="profile-about"></p>
+      <dl class="data-list" id="profile-details"></dl>
+    </section>
 
-      <section id="research" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow">Research Interests</p>
-          <h2>Research Focus</h2>
-        </div>
-        <div class="focus-list" id="research-list"></div>
-      </section>
+    <section class="page-section" aria-labelledby="expertise-heading">
+      <h2 id="expertise-heading">Areas of Expertise</h2>
+      <ul class="plain-list" id="expertise-list"></ul>
+    </section>
 
-      <section id="history" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Scholarly Record</p>
-          <h2>Research History</h2>
-        </div>
-        <p class="section-copy">A selected research trajectory based on records associated with Scopus Author ID 57211329861, IEEE Author ID 37087014147, and the linked Google Scholar profile.</p>
-        <div class="research-timeline" id="research-history"></div>
-      </section>
+    <section id="research" class="page-section">
+      <h2>Research</h2>
+      <div class="research-list" id="research-list"></div>
+      <p class="collaboration-note" id="collaboration-text"></p>
+    </section>
 
-      <section id="profiles" class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow">Research Identity</p>
-          <h2>Academic Profiles</h2>
-        </div>
-        <div class="profile-link-list" id="academic-links"></div>
-      </section>
+    <section id="publications" class="page-section">
+      <h2>Selected Publications</h2>
+      <p class="section-intro" id="publication-summary"></p>
+      <div class="publication-history" id="publication-history"></div>
+    </section>
 
-      <section id="contact" class="contact-panel">
-        <p class="eyebrow">Collaboration</p>
-        <h2>Open to academic collaboration and interdisciplinary research.</h2>
-        <p class="section-copy">Please use the links below for contact and research profile access.</p>
-        <div class="contact-actions" id="contact-links"></div>
-      </section>
+    <section id="links" class="page-section">
+      <h2>Academic Profiles &amp; Contact</h2>
+      <dl class="data-list link-list" id="academic-links"></dl>
+    </section>
+  </main>
 
-      <footer class="site-footer">
-        <p>&copy; <span id="current-year"></span> Fiddin Yusfida A'la</p>
-        <p>Designed for GitHub Pages with a modern academic editorial layout.</p>
-      </footer>
-    </main>
-  </div>
+  <footer class="site-footer">
+    <div>
+      <p>&copy; <span id="current-year"></span> Fiddin Yusfida A'la</p>
+      <p>Informatics Engineering · Universitas Sebelas Maret</p>
+    </div>
+  </footer>
 </body>
 </html>
