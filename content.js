@@ -23,23 +23,19 @@ window.profileContent = {
   researchAreas: [
     {
       title: "Computer Vision",
-      description: "Developing computational methods to interpret, analyze, and extract meaningful information from visual data.",
-      meta: "Research Area"
+      description: "Developing computational methods to interpret, analyze, and extract meaningful information from visual data."
     },
     {
       title: "Deep Learning",
-      description: "Exploring deep neural architectures and learning strategies for classification and pattern recognition.",
-      meta: "Research Area"
+      description: "Exploring deep neural architectures and learning strategies for classification and pattern recognition."
     },
     {
       title: "Medical Image Classification",
-      description: "Applying computational methods to support accurate, measurable, and reproducible medical image classification.",
-      meta: "Research Area"
+      description: "Applying computational methods to support accurate, measurable, and reproducible medical image classification."
     },
     {
       title: "Applied Machine Learning",
-      description: "Applying machine learning to real-world challenges with an emphasis on rigorous evaluation and practical impact.",
-      meta: "Research Area"
+      description: "Applying machine learning to real-world challenges with an emphasis on rigorous evaluation and practical impact."
     }
   ],
   researchHistory: [
