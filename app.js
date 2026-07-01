@@ -14,9 +14,9 @@ byId("collaboration-text").textContent = content.profile.collaboration;
 byId("current-year").textContent = new Date().getFullYear();
 
 const facts = [
-  ["Position", content.profile.role],
   ["Institution", content.profile.institution],
-  ["Location", content.profile.location]
+  ["Location", content.profile.location],
+  ["Email", "fiddin@staff.uns.ac.id"]
 ];
 
 byId("profile-facts").innerHTML = facts
@@ -24,26 +24,26 @@ byId("profile-facts").innerHTML = facts
   .join("");
 
 const stats = [
-  { value: `${totalPublications}+`, label: "selected publications" },
-  { value: `${earliestYear}-${latestYear}`, label: "research record span" },
-  { value: `${content.researchAreas.length}`, label: "core research areas" }
+  `${totalPublications}+ selected publications`,
+  `${earliestYear}-${latestYear} research record`,
+  `${content.researchAreas.length} core research areas`
 ];
 
 byId("profile-stats").innerHTML = stats
-  .map((item) => `<article class="stat-card"><strong>${item.value}</strong><span>${item.label}</span></article>`)
+  .map((item) => `<div class="stat-card"><strong>${item}</strong></div>`)
   .join("");
 
 byId("expertise-list").innerHTML = content.profile.expertise.map((item) => `<span>${item}</span>`).join("");
 
-const card = (item) => `
+byId("research-list").innerHTML = content.researchAreas.map((item) => `
   <article class="content-card">
     <p class="card-meta">${item.meta}</p>
-    <h3>${item.title}</h3>
-    <p>${item.description}</p>
+    <div>
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+    </div>
   </article>
-`;
-
-byId("research-list").innerHTML = content.researchAreas.map(card).join("");
+`).join("");
 
 byId("research-history").innerHTML = content.researchHistory.map((entry) => `
   <article class="history-entry">
@@ -69,33 +69,31 @@ byId("research-history").innerHTML = content.researchHistory.map((entry) => `
 const profileDescriptions = {
   "Google Scholar": "Citation profile and indexed scholarly outputs.",
   "SINTA": "Indonesian research identity and national indexing record.",
-  "ORCID": "Persistent researcher identifier for academic interoperability.",
-  "Scopus": "Author profile with indexed publications and metrics.",
-  "IEEE Xplore": "Conference and journal publications in engineering venues.",
-  "LinkedIn": "Professional profile and broader academic network.",
-  "Department Website": "Institutional page and departmental context."
+  "ORCID": "Persistent researcher identifier.",
+  "Scopus": "Indexed author profile and publication record.",
+  "IEEE Xplore": "Engineering and conference publication record.",
+  "LinkedIn": "Professional profile and network.",
+  "Department Website": "Institutional profile and department context."
 };
 
 const academicLabels = new Set(Object.keys(profileDescriptions));
-const academicLinks = content.links.filter((item) => academicLabels.has(item.label));
-byId("academic-links").innerHTML = academicLinks.map((item) => `
-  <a class="profile-link" href="${item.url}" target="_blank" rel="noreferrer">
-    <strong>${item.label}</strong>
-    <p>${profileDescriptions[item.label]}</p>
-    <span>Open profile</span>
-  </a>
-`).join("");
+byId("academic-links").innerHTML = content.links
+  .filter((item) => academicLabels.has(item.label))
+  .map((item) => `
+    <a class="profile-link" href="${item.url}" target="_blank" rel="noreferrer">
+      <strong>${item.label}</strong>
+      <p>${profileDescriptions[item.label]}</p>
+      <span>Open</span>
+    </a>
+  `)
+  .join("");
 
-const sidebarLabels = new Set(["Email", "GitHub"]);
-const sidebarLinks = content.links.filter((item) => sidebarLabels.has(item.label));
-byId("sidebar-links").innerHTML = sidebarLinks
+byId("sidebar-links").innerHTML = content.links
+  .filter((item) => ["Email", "GitHub"].includes(item.label))
   .map((item) => `<a class="sidebar-link" href="${item.url}" ${item.url.startsWith("mailto:") ? "" : 'target="_blank" rel="noreferrer"'}>${item.label}</a>`)
   .join("");
 
-const primaryLabels = new Set(["Email", "Google Scholar", "GitHub"]);
-const primaryLinks = content.links.filter((item) => primaryLabels.has(item.label));
-byId("contact-links").innerHTML = primaryLinks.map((item, index) => `
-  <a class="button ${index === 0 ? "button-primary" : "button-secondary"}" href="${item.url}" ${item.url.startsWith("mailto:") ? "" : 'target="_blank" rel="noreferrer"'}>
-    ${item.label}
-  </a>
-`).join("");
+byId("contact-links").innerHTML = content.links
+  .filter((item) => ["Email", "Google Scholar", "GitHub"].includes(item.label))
+  .map((item) => `<a class="button" href="${item.url}" ${item.url.startsWith("mailto:") ? "" : 'target="_blank" rel="noreferrer"'}>${item.label}</a>`)
+  .join("");
