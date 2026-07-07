@@ -1,7 +1,7 @@
 window.profileContent = {
   profile: {
     name: "Fiddin Yusfida A'la",
-    role: "Lecturer (Lektor) · Informatics Engineering",
+    role: "Lecturer · Informatics Engineering",
     institution: "Universitas Sebelas Maret",
     location: "Surakarta, Indonesia",
     summary: "Lecturer and researcher in Informatics Engineering with research interests in computer vision, deep learning, medical image classification, and applied machine learning.",

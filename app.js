@@ -25,7 +25,7 @@ byId("current-year").textContent = new Date().getFullYear();
 byId("publication-summary").textContent = `${totalPublications} selected publications from ${earliestYear}–${latestYear}, based on the linked Google Scholar, Scopus, and IEEE Xplore records.`;
 
 const profileDetails = [
-  ["Academic Position", "Lecturer (Lektor)"],
+  ["Academic Position", "Lecturer"],
   ["Study Program", "Informatics Engineering"],
   ["Institution", content.profile.institution],
   ["Location", content.profile.location],
