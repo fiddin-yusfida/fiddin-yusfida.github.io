@@ -45,7 +45,7 @@ window.profileContent = {
       description: "Extended applied machine learning research to student-performance assessment, retrieval-augmented question answering for PDF resumes, and leakage-aware deep-learning evaluation for potato leaf disease classification.",
       publications: [
         { title: "Hybrid Retrieval-Augmented Question Answering for PDF Resumes Using BERT-NER and Ontology-Based Context Enrichment", venue: "2026 International Conference on Data Science and Its Applications (ICoDSA)", url: "https://doi.org/10.1109/ICoDSA71861.2026.11754628" },
-        { title: "A Leakage-Aware Comparative Study of CNN Architectures and Loss Functions for Potato Leaf Disease Classification", venue: "2026 International Conference on Smart Science and Technology (IncoSST), pp. 31–36", url: "https://vufind2.lib.aegean.gr/EDS/Search?lookfor=%22A%27la%2C+Fiddin+Yusfida%22&type=AU" },
+        { title: "A Leakage-Aware Comparative Study of CNN Architectures and Loss Functions for Potato Leaf Disease Classification", venue: "2026 International Conference on Smart Science and Technology (IncoSST), pp. 31–36", url: "https://doi.org/10.1109/IncoSST69426.2026.11709831" },
         { title: "Application of Naïve Bayes Method for Assessing Student Performance", venue: "Journal of Advances in Information and Industrial Technology, 8(1), 87–94", url: "https://doi.org/10.52435/jaiit.v8i1.771" }
       ]
     },
